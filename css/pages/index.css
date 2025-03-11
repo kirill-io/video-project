@@ -41,10 +41,14 @@
   width: 2%;
 }
 
-.text-container {
+.text-container-desktop {
   display: flex;
   flex-direction: column;
   width: 96%;
+}
+
+.text-container-tablet {
+  display: none;
 }
 
 .text-row {
@@ -88,4 +92,40 @@
 .gap-bg-row {
   background: #000;
   flex: 1 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .text-wrap {
+    font-size: 12.73vw;
+  }
+
+  .text-container-desktop {
+    display: none;
+  }
+
+  .text-container-tablet {
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+  }
+
+  .text-row:not(:has(.text-gap)) {
+
+  }
+
+  .text-row:not(:has(.text-gap)) .text {
+    padding: 0;
+  }
+
+  .text-gap::before {
+    height: 4vw;
+  }
+  
+  .text-gap::after {
+    height: 3vw;
+  }
+  
+  .gap {
+    height: 8vw;
+  }
 }
