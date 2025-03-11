@@ -1,3 +1,91 @@
 @import url('../vendor/fonts.css');
 @import url('../vendor/variables.css');
 @import url('../vendor/root.css');
+
+.video-bg {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.video-bg video {
+  height: 100vh;
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+}
+
+.text-wrap {
+  color: #fff;
+  display: flex;
+  font-family: var(--primary-font);
+  font-size: 8vw;
+  font-weight: 700;
+  inset: 0;
+  position: absolute;
+}
+
+.text-wrap::before {
+  background: #000;
+  content: '';
+  height: 100vh;
+  width: 2%;
+}
+
+.text-wrap::after {
+  background: #000;
+  content: '';
+  height: 100vh;
+  width: 2%;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  width: 96%;
+}
+
+.text-row {
+  display: flex;
+}
+
+.text {
+  background: #000;
+}
+
+.text:first-child {
+  padding-right: 10px;
+}
+
+.text:last-child {
+  padding-left: 10px;
+}
+
+.text-gap {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-gap::before {
+  background: #000;
+  content: '';
+  height: 3vw;
+}
+
+.text-gap::after {
+  background: #000;
+  content: '';
+  height: 2vw;
+}
+
+.gap {
+  height: 5vw;
+}
+
+.gap-bg-row {
+  background: #000;
+  flex: 1 0 auto;
+}
